@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodingAi News</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    .sticky-mobile-menu {
+      position: sticky;
+      bottom: 0;
+      background-color: white;
+      padding: 10px 0;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .sticky-mobile-menu .btn {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="bg-dark text-center py-4 text-white">
+  <i class="fas fa-robot fa-2x"></i><h1>CodingAi</h1>
+</header>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-newspaper"></i> Nouvelle version 5.3</h5>
+          <p class="card-text">Notre bot vient d'être mis à jour vers la version 5.3 - Alpha beaucoup de bugs ont été fixé et une nouvelle design vient d'être ajouté.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-images"></i> Générateur d'images</h5>
+          <p class="card-text">Nous venons d'ajouter un générateur d'images très avancées basées sur la technologie <b>Stable Diffusion </b>(Disponible pour les utilisateurs Plus)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-memory"></i> Mémoire intégrée</h5>
+          <p class="card-text">Maintenant le bot est capable de se souvenir de vos anciennes discussion (Cette fonctionnalité est toujours en mode <mark>Bêta</mark> et peut présenter des erreurs).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-mobile-menu d-md-none">
+  <div class="container d-flex justify-content-between">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#premiumModal">
+      <i class="fas fa-crown"></i>
+    </button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">
+      <i class="fas fa-info-circle"></i>
+    </button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+      <i class="fas fa-envelope"></i>
+    </button>
+  </div>
+</div>
+
+<div class="modal fade" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="premiumModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="premiumModalLabel">Premium</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Notre bot propose une version premium pour une meilleure expérience.Voici ce que vous aurez accès :
+        <ul>
+        <li>Accès à 200 requêtes/jour</li>
+        <li>Générateur d'images</li>
+        <li>Accès au modèle d'IA le plus puissant avec 4096 Tokens pour 2500 pour les non pro</li>
+        </ul>
+        <blockquote>
+          Pour acheter contacter <a href="https://t.me/A_liou" target="blank">@A_liou</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">À propos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        CodingAi est un chatbot basée sur l'intelligence artificielle il peut faire plein de choses comme: écrire des poèmes, générer des postes de blog, générer des blagues, générer et corriger du code...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contactez-nous</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Pour nous contacter, veuillez envoyer un e-mail à <a href="mailto:codingai@telegmail.com">codingai@telegmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
