@@ -8,14 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    /* Styles pour les widgets Telegram */
-    .tg-widget-text {
-      margin-bottom: 20px;
+    .tg-app-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tg-card {
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tg-card-header {
+      padding: 20px;
+      background-color: var(--tg-theme-secondary-bg-color);
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .tg-card-body {
+      padding: 20px;
     }
 
     .tg-widget-buttons {
       display: flex;
       justify-content: center;
+      margin-top: 20px;
     }
 
     .tg-widget-button {
@@ -27,24 +44,6 @@
       border: none;
       cursor: pointer;
       border-radius: 5px;
-    }
-
-    /* Styles pour la section Avantages et Inconvénients */
-    .showcase-content {
-      background-color: var(--tg-theme-secondary-bg-color);
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    .showcase-title {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .showcase-subtitle {
-      font-size: 20px;
-      margin-top: 15px;
-      margin-bottom: 5px;
     }
 
     .showcase-list {
@@ -73,35 +72,38 @@
     <h1 class="display-4">Max Robt Showcase</h1>
   </div>
 
-  <div class="tg-app-content">
-    <div class="tg-widget tg-widget-text">
-      <p>Max Robt est une intelligence artificielle révolutionnaire...</p>
-    </div>
-
-    <div class="tg-widget tg-widget-buttons">
-      <button class="tg-widget-button" onclick="handleContactClick()">Contactez-nous</button>
-      <!-- Ajoutez d'autres boutons au besoin -->
-    </div>
-
-    <div class="showcase-content">
-      <div class="showcase-title"><i class="fas fa-check-circle"></i> Avantages et Inconvénients de Max Robt</div>
-      <div class="showcase-subtitle"><i class="fas fa-thumbs-up"></i> Avantages</div>
+  <!-- Showcase Card 1: Avantages -->
+  <div class="tg-card">
+    <div class="tg-card-header"><i class="fas fa-thumbs-up"></i> Max Robt - Avantages</div>
+    <div class="tg-card-body">
+      <p>Max Robt est une intelligence artificielle révolutionnaire conçue pour offrir des performances exceptionnelles.</p>
       <ul class="showcase-list">
-        <li><i class="fas fa-brain"></i> Plus intelligent que GPT grâce à son modèle basé sur META LLAMA 70B</li>
-        <li><i class="fas fa-check"></i> Efficace et accessible, adapté à un large éventail d'utilisateurs</li>
-        <li><i class="fas fa-money-bill-wave"></i> Disponible sous licence non commerciale, plus abordable pour certains utilisateurs</li>
-      </ul>
-
-      <div class="showcase-subtitle"><i class="fas fa-thumbs-down"></i> Inconvénients</div>
-      <ul class="showcase-list">
-        <li><i class="fas fa-exclamation-triangle"></i> La taille du modèle peut limiter la génération de textes aussi complexes que GPT</li>
+        <li><i class="fas fa-brain"></i> Doté d'une intelligence supérieure grâce à son modèle basé sur META LLAMA 70B</li>
+        <li><i class="fas fa-check"></i> Rapidité et efficacité inégalées, adapté à divers cas d'utilisation</li>
+        <li><i class="fas fa-check"></i> Accessible gratuitement, sans licence commerciale, ce qui le rend économique pour tous les utilisateurs</li>
       </ul>
     </div>
+  </div>
 
-    <div class="tg-widget tg-widget-text">
-      <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter par e-mail à <a href="mailto:codingai@telegmail.com">codingai@telegmail.com</a>.</p>
-      <div class="popup-button" onclick="showCustomPopup()">Afficher une popup personnalisée</div>
+  <!-- Showcase Card 2: Inconvénients -->
+  <div class="tg-card">
+    <div class="tg-card-header"><i class="fas fa-thumbs-down"></i> Max Robt - Inconvénients</div>
+    <div class="tg-card-body">
+      <p>Bien que Max Robt excelle dans de nombreux domaines, il a certaines limitations à prendre en compte.</p>
+      <ul class="showcase-list">
+        <li><i class="fas fa-exclamation-triangle"></i> La taille du modèle peut être un facteur limitant pour générer des textes extrêmement complexes.</li>
+      </ul>
     </div>
+  </div>
+
+  <!-- Contact Widget -->
+  <div class="tg-widget tg-widget-buttons">
+    <button class="tg-widget-button" onclick="handleContactClick()">Contactez-nous</button>
+  </div>
+
+  <!-- Additional Widget -->
+  <div class="tg-widget tg-widget-buttons">
+    <div class="popup-button" onclick="showCustomPopup()">Afficher une popup personnalisée</div>
   </div>
 </div>
 
@@ -111,23 +113,21 @@
   Telegram.WebApp.enableClosingConfirmation();
 
   function handleContactClick() {
-    // Logique à exécuter lorsqu'un bouton est cliqué
-    alert("Contactez-nous !");
+    Telegram.WebApp.openLink("https://t.me/codingsupport_bot");
   }
 
   function showCustomPopup() {
-    // Logique pour afficher une popup personnalisée
     var popupParams = {
-      title: "Titre de la Popup",
-      message: "Ceci est le corps de la Popup.\nIl peut contenir jusqu'à 256 caractères.",
+      title: "Découvrez Max Robt",
+      message: "Max Robt offre des performances exceptionnelles pour vos besoins en intelligence artificielle.",
       buttons: [{ type: "ok", text: "OK" }, { type: "cancel", text: "Annuler" }]
     };
 
     Telegram.WebApp.showPopup(popupParams, function (pressedButton) {
       if (pressedButton && pressedButton.id === "ok") {
-        alert("Bouton OK pressé !");
+        Telegram.WebApp.openLink("https://t.me/codingsupport_bot");
       } else {
-        alert("Popup fermée !");
+        
       }
     });
   }
