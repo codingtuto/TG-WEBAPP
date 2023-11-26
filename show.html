@@ -69,9 +69,11 @@
 
 <div class="container">
   <div class="tg-app-header">
-    <h1 class="display-4">Max Robt Showcase</h1>
+    <h3 class="display-4">Max Root</h3>
   </div>
-
+    <div class="tg-card">
+ <p>Max Robt est un IA basé sur un modèle open source révolutionnaire, la META LLAMA 70B. Cette intelligence artificielle, plus avancée que GPT, offre des fonctionnalités améliorées et une expérience utilisateur exceptionnelle.</p>
+</div>
   <!-- Showcase Card 1: Avantages -->
   <div class="tg-card">
     <div class="tg-card-header"><i class="fas fa-thumbs-up"></i> Max Robt - Avantages</div>
@@ -80,7 +82,7 @@
       <ul class="showcase-list">
         <li><i class="fas fa-brain"></i> Doté d'une intelligence supérieure grâce à son modèle basé sur META LLAMA 70B</li>
         <li><i class="fas fa-check"></i> Rapidité et efficacité inégalées, adapté à divers cas d'utilisation</li>
-        <li><i class="fas fa-check"></i> Accessible gratuitement, sans licence commerciale, ce qui le rend économique pour tous les utilisateurs</li>
+        <li><i class="fas fa-check"></i> Accessible gratuitement, polyvalent</li>
       </ul>
     </div>
   </div>
@@ -95,15 +97,9 @@
       </ul>
     </div>
   </div>
-
-  <!-- Contact Widget -->
-  <div class="tg-widget tg-widget-buttons">
-    <button class="tg-widget-button" onclick="handleContactClick()">Contactez-nous</button>
-  </div>
-
   <!-- Additional Widget -->
   <div class="tg-widget tg-widget-buttons">
-    <div class="popup-button" onclick="showCustomPopup()">Afficher une popup personnalisée</div>
+    <div class="popup-button" onclick="showCustomPopup()">Contacter l'admin</div>
   </div>
 </div>
 
@@ -118,17 +114,10 @@
 
   function showCustomPopup() {
     var popupParams = {
-      title: "Découvrez Max Robt",
-      message: "Max Robt offre des performances exceptionnelles pour vos besoins en intelligence artificielle.",
-      buttons: [{ type: "ok", text: "OK" }, { type: "cancel", text: "Annuler" }]
+      title: "Contacter",
+      message: "Pour contacter l'admin cliquer sur le bouton Support",
+      buttons: [{ type: "ok", text: "Ok compris!" }]
     };
-
-    Telegram.WebApp.showPopup(popupParams, function (pressedButton) {
-      if (pressedButton && pressedButton.id === "ok") {
-        Telegram.WebApp.openLink("https://t.me/codingsupport_bot");
-      } else {
-        
-      }
     });
   }
 </script>
