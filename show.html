@@ -56,6 +56,14 @@
       margin-bottom: 10px;
     }
 
+    .popup-button {
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -71,7 +79,7 @@
     </div>
 
     <div class="tg-widget tg-widget-buttons">
-      <button class="tg-widget-button" onclick="handleButtonClick()">Contactez-nous</button>
+      <button class="tg-widget-button" onclick="handleContactClick()">Contactez-nous</button>
       <!-- Ajoutez d'autres boutons au besoin -->
     </div>
 
@@ -92,6 +100,7 @@
 
     <div class="tg-widget tg-widget-text">
       <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter par e-mail à <a href="mailto:codingai@telegmail.com">codingai@telegmail.com</a>.</p>
+      <div class="popup-button" onclick="showCustomPopup()">Afficher une popup personnalisée</div>
     </div>
   </div>
 </div>
@@ -101,9 +110,26 @@
   Telegram.WebApp.setBackgroundColor("#RRGGBB");
   Telegram.WebApp.enableClosingConfirmation();
 
-  function handleButtonClick() {
+  function handleContactClick() {
     // Logique à exécuter lorsqu'un bouton est cliqué
     alert("Contactez-nous !");
+  }
+
+  function showCustomPopup() {
+    // Logique pour afficher une popup personnalisée
+    var popupParams = {
+      title: "Titre de la Popup",
+      message: "Ceci est le corps de la Popup.\nIl peut contenir jusqu'à 256 caractères.",
+      buttons: [{ type: "ok", text: "OK" }, { type: "cancel", text: "Annuler" }]
+    };
+
+    Telegram.WebApp.showPopup(popupParams, function (pressedButton) {
+      if (pressedButton && pressedButton.id === "ok") {
+        alert("Bouton OK pressé !");
+      } else {
+        alert("Popup fermée !");
+      }
+    });
   }
 </script>
 
