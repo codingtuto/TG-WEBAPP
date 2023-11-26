@@ -71,9 +71,9 @@
   <div class="tg-app-header">
     <h3 class="display-4">Max Root</h3>
   </div>
-    <div class="tg-card">
- <p>Max Robt est un IA basé sur un modèle open source révolutionnaire, la META LLAMA 70B. Cette intelligence artificielle, plus avancée que GPT, offre des fonctionnalités améliorées et une expérience utilisateur exceptionnelle.</p>
-</div>
+    <ul class="showcase-list">
+ <li>Max Robot est un IA basé sur un modèle open source révolutionnaire, la META LLAMA 70B. Cette intelligence artificielle, plus avancée que GPT, offre des fonctionnalités améliorées et une expérience utilisateur exceptionnelle.</li>
+</ul>
   <!-- Showcase Card 1: Avantages -->
   <div class="tg-card">
     <div class="tg-card-header"><i class="fas fa-thumbs-up"></i> Max Robt - Avantages</div>
@@ -114,10 +114,17 @@
 
   function showCustomPopup() {
     var popupParams = {
-      title: "Contacter",
-      message: "Pour contacter l'admin cliquer sur le bouton Support",
-      buttons: [{ type: "ok", text: "Ok compris!" }]
+      title: "Découvrez Max Robt",
+      message: "Max Robt offre des performances exceptionnelles pour vos besoins en intelligence artificielle.",
+      buttons: [{ type: "ok", text: "OK" }, { type: "cancel", text: "Annuler" }]
     };
+
+    Telegram.WebApp.showPopup(popupParams, function (pressedButton) {
+      if (pressedButton && pressedButton.id === "ok") {
+        Telegram.WebApp.openLink("https://t.me/codingsupport_bot");
+      } else {
+        
+      }
     });
   }
 </script>
