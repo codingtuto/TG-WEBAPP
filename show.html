@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Robt Showcase</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    /* Styles pour les widgets Telegram */
+    .tg-widget-text {
+      margin-bottom: 20px;
+    }
+
+    .tg-widget-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tg-widget-button {
+      margin: 0 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: var(--tg-theme-button-color);
+      color: var(--tg-theme-button-text-color);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Styles pour la section Avantages et Inconvénients */
+    .showcase-content {
+      background-color: var(--tg-theme-secondary-bg-color);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .showcase-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .showcase-subtitle {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .showcase-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .showcase-list li {
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="tg-app-header">
+    <h1 class="display-4">Max Robt Showcase</h1>
+  </div>
+
+  <div class="tg-app-content">
+    <div class="tg-widget tg-widget-text">
+      <p>Max Robt est une intelligence artificielle révolutionnaire...</p>
+    </div>
+
+    <div class="tg-widget tg-widget-buttons">
+      <button class="tg-widget-button" onclick="handleButtonClick()">Contactez-nous</button>
+      <!-- Ajoutez d'autres boutons au besoin -->
+    </div>
+
+    <div class="showcase-content">
+      <div class="showcase-title"><i class="fas fa-check-circle"></i> Avantages et Inconvénients de Max Robt</div>
+      <div class="showcase-subtitle"><i class="fas fa-thumbs-up"></i> Avantages</div>
+      <ul class="showcase-list">
+        <li><i class="fas fa-brain"></i> Plus intelligent que GPT grâce à son modèle basé sur META LLAMA 70B</li>
+        <li><i class="fas fa-check"></i> Efficace et accessible, adapté à un large éventail d'utilisateurs</li>
+        <li><i class="fas fa-money-bill-wave"></i> Disponible sous licence non commerciale, plus abordable pour certains utilisateurs</li>
+      </ul>
+
+      <div class="showcase-subtitle"><i class="fas fa-thumbs-down"></i> Inconvénients</div>
+      <ul class="showcase-list">
+        <li><i class="fas fa-exclamation-triangle"></i> La taille du modèle peut limiter la génération de textes aussi complexes que GPT</li>
+      </ul>
+    </div>
+
+    <div class="tg-widget tg-widget-text">
+      <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter par e-mail à <a href="mailto:codingai@telegmail.com">codingai@telegmail.com</a>.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  Telegram.WebApp.setHeaderColor("#RRGGBB");
+  Telegram.WebApp.setBackgroundColor("#RRGGBB");
+  Telegram.WebApp.enableClosingConfirmation();
+
+  function handleButtonClick() {
+    // Logique à exécuter lorsqu'un bouton est cliqué
+    alert("Contactez-nous !");
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
